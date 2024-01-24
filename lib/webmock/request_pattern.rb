@@ -305,7 +305,7 @@ module WebMock
       when :json then
         WebMock::Util::JSON.parse(body)
       when :xml then
-        Crack::XML.parse(body)
+        Hash.from_xml(Nokogiri::XML(body))
       else
         WebMock::Util::QueryMapper.query_to_values(body, notation: Config.instance.query_values_notation)
       end

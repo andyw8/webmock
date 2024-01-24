@@ -4,7 +4,7 @@ require 'singleton'
 
 require 'addressable/uri'
 require 'addressable/template'
-require 'crack/xml'
+require 'nokogiri'
 
 require_relative 'webmock/deprecation'
 require_relative 'webmock/version'
